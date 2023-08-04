@@ -1,0 +1,107 @@
+ [
+  {
+    "img": "./img/ryaba.webp",
+    "alt": "chicken",
+    "title": "Філе стегна Наша Ряба без шкіри, без кістки охолоджене ~ 1кг",
+    "price": "159.90",
+    "id": 1
+  },
+  {
+    "img": "./img/1688056938-s150x150.webp",
+    "alt": "milk",
+    "title": "Молоко Галичина ультрапастеризоване 2,5% 950г",
+    "price": "34.90",
+    "id": 2
+  },
+  {
+    "img": "./img/borjomi.webp",
+    "alt": "water",
+    "title": "Вода мінеральна Моршинська негазована 1,5л • 6 шт. в уп.",
+    "price": "109.90",
+    "id": 3
+  },
+  {
+    "img": "./img/1678730906-s150x150.webp",
+    "alt": "butter",
+    "title": "Масло Metro Chef екстра солодковершкове 82,5% 200г",
+    "price": "53.90",
+    "id": 4
+  },
+  {
+    "img": "./img/fruit.webp",
+    "alt": "fruit",
+    "title": "Нектарин за 1 кг",
+    "price": "59.18",
+    "id": 5
+  },
+  {
+    "img": "./img/sourCream.jpeg",
+    "alt": "sourCream",
+    "title": "Сметана Ферма 20% 350г",
+    "price": "38.38",
+    "id": 6
+  },
+  {
+    "img": "./img/pepper.webp",
+    "alt": "pepper",
+    "title": "Перець Білозерка за 1 кг",
+    "price": "46.70",
+    "id": 7
+  },
+  {
+    "img": "./img/cheese.webp",
+    "alt": "cheese",
+    "title": "Сир Metro Chef Гауда слайси 48% 150г",
+    "price": "79.90",
+    "id": 8
+  },
+  {
+    "img": "./img/sausages.webp",
+    "alt": "sausages",
+    "title": "Сосиски Metro Chef Віденські вищого гатунку 595г",
+    "price": "134.90",
+    "id": 9
+  },
+  {
+    "img": "./img/jamon.webp",
+    "alt": "jamon",
+    "title": "Хамон Metro Chef Серрано Ресерва 300г",
+    "price": "229.90",
+    "id": 10
+  },
+  {
+    "img": "./img/rice.webp",
+    "alt": "rice",
+    "title": "Рис Metro Chef довгозернистий пропарений 1кг",
+    "price": "50.90",
+    "id": 11
+  },
+  {
+    "img": "./img/salmon.webp",
+    "alt": "salmon",
+    "title": "Сьомга Metro Chef слабосолена 300г",
+    "price": "249.90",
+    "id": 12
+  },
+  {
+    "img": "./img/cream.jpeg",
+    "alt": "cream",
+    "title": "Вершки Простоквашино 20% 200г",
+    "price": "31.10",
+    "id": 13
+  },
+  {
+    "img": "./img/juice.webp",
+    "alt": "juice",
+    "title": "Соковий напій Sandora Сицилійський червоний апельсин 0,95л",
+    "price": "52.89",
+    "id": 14
+  },
+  {
+    "img": "./img/cookie.webp",
+    "alt": "cookie",
+    "title": "Печиво здобне Rioba Супер-моніка 600г",
+    "price": "83.90",
+    "id": 15
+  }
+]

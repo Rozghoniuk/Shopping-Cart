@@ -18,12 +18,33 @@ h1 {
 }
 
 .cart {
+  position: relative;
   background-color: darkblue;
-  padding: 5px 20px;
+  padding: 0 20px 0 50px;
   color: white;
   border-radius: 3px;
   font-size: 16px;
   cursor: pointer;
+}
+.cart img {
+  position: absolute;
+  width: 20px;
+  height: auto;
+  left: 20px;
+}
+.cart figure {
+  position: absolute;
+  width: auto;
+  height: 12px;
+  padding: 0 3px;
+  background-color: orange;
+  border-radius: 50%;
+  color: darkblue;
+  font-size: 10px;
+  line-height: 13px;
+  top: 3px;
+  left: 32px;
+  z-index: 2;
 }
 .basket_background {
   position: fixed;
@@ -41,7 +62,7 @@ h1 {
 }
 
 .basket {
-  position: absolute;
+  position: fixed;
   border: 1px solid #000;
   width: 1000px;
   left: calc(50% - 500px);

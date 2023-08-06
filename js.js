@@ -4,6 +4,7 @@ let openBasketBtn = document.querySelector(".cart");
 let windowBasket = document.querySelector(".basket");
 let closeBasketBtn = document.querySelector(".close");
 let basketBackground = document.querySelector(".basket_background");
+let counter = document.querySelector('figure');
 
 openBasketBtn.addEventListener("click", openBasket)
 
@@ -19,11 +20,20 @@ function openBasket() {
   basketBackground.classList.add("active");
 }
 
+function updateCounter() {
+  if (arr.length > 0) {
+    counter.style.display = 'block';
+    counter.innerText = arr.length;
+  } else { 
+    counter.style.display = 'none';
+  }
+}
+
 // -----------------Product List------------------
 
 function getProductList() {
   let request = new XMLHttpRequest();
-  request.open("GET", "./output.json");
+  request.open("GET", "https://run.mocky.io/v3/e2fccc20-178f-4206-a8ce-52e5853363b2");
   request.send();
   request.addEventListener('load', () => { 
     if (request.status = 200) {
@@ -37,16 +47,21 @@ function getProductList() {
 let productsList = [];
 let productsListElement = document.querySelector('.grid');
 
+
 function renderProductList() {
   productsListElement.innerHTML = "";
-  productsList.forEach((el) => { 
-    productsListElement.innerHTML += `<div class="product_card" data-key="${el.id}">
+  let template = "";
+
+  productsList.forEach((el) => {
+    template += `<div class="product_card" data-key="${el.id}">
             <img src=${el.img} alt=${el.alt} />
             <p>${el.title}</p>
             <div class="product_card-price"><span>${el.price}</span>грн</div>
-            ${!arr.find(obj => obj.id === el.id) ? "<button>Купити</button>":"<button class='active'>В кошику</button>"}            
+            ${!arr.find(obj => obj.id === el.id) ? "<button>Купити</button>" : "<button class='active'>В кошику</button>"}            
           </div>`
-  })
+  });
+
+  productsListElement.innerHTML = template;
 }
 
 
@@ -61,9 +76,11 @@ function addTobasket(button, key) {
     button.innerText = "В кошику";
     renderBasket();
     calcTotalPrice();
+    updateCounter();
   } else {
     openBasket();
   }
+  
 };
 
 productsListElement.addEventListener('click', (e) => { 
@@ -88,9 +105,11 @@ emptyBasket.innerText = "Ваша корзина пуста";
 basketProduct.append(emptyBasket);
 
 function renderBasket() {
-  basketProduct.innerHTML ="";
-  arr.forEach((el, i) => { 
-    basketProduct.innerHTML+=`<div class="basket_product-item" data-price=${el.price} data-key=${el.id}>
+  basketProduct.innerHTML = "";
+  let template = "";
+  
+  arr.forEach((el, i) => {
+    template += `<div class="basket_product-item" data-price=${el.price} data-key=${el.id}>
             <img src=${el.img} alt=${el.alt} />
             <p>${el.title}</p>
             <div class="item_quantity">
@@ -101,7 +120,8 @@ function renderBasket() {
             <div class="price"><span>${el.price}</span>грн</div>
             <button class="del"></button>
           </div>`
-}) 
+  });
+  basketProduct.innerHTML = template;
 }
 
 
@@ -141,6 +161,7 @@ function removeCardProduct(product, key) {
     basketProduct.append(emptyBasket);
   }
   renderProductList();
+  updateCounter();
 }
 
   
@@ -168,3 +189,4 @@ basketProduct.addEventListener("click", (e) => {
   }
 });
 getProductList();
+updateCounter();
